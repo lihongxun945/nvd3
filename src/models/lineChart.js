@@ -196,7 +196,7 @@ nv.models.lineChart = function() {
 
       xAxis
         .scale(x)
-        .ticks( d3.min([availableWidth / 50, data[0].values.length]) )
+        .ticks( d3.max([d3.min([availableWidth / 50, data[0].values.length]), 5]) )
         .tickSize(-availableHeight, 0);
 
       g.select('.nv-x.nv-axis')
